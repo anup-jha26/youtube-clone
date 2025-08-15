@@ -1,8 +1,9 @@
-<p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube Logo" width="100"/>
-</p>
 
-# YouTube Clone
+
+# <p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube Logo" width="20"/>
+</p> 
+YouTube Clone
 
 A responsive and feature-rich YouTube clone built with **React**, **Vite**, **TypeScript**, and **Tailwind CSS**, powered by the **YouTube Data API v3**.
 
