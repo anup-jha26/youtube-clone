@@ -8,9 +8,9 @@ import PlaylistItems from '../Components/PlaylistItems';
 function Playlist() {
     const { channelId, playlistId } = useParams();
     const {
-        playListInfo,
-        showDesc,
-        setShowDesc,
+        playlistInfo,
+        showDescription,
+        setShowDescription,
         fetchPlaylistInfo
     } = usePlaylistInfo();
     const {
@@ -28,15 +28,15 @@ function Playlist() {
     return (
         <div className="relative">
             {/* Description Modal */}
-            {showDesc && playListInfo?.description && (
+            {showDescription && playlistInfo?.description && (
                 <div className="absolute z-10 left-1/2 top-14 transform -translate-x-1/2 bg-neutral-800 rounded-xl overflow-hidden">
                     <div className="w-[600px] max-h-[500px] p-8 overflow-y-auto flex flex-col gap-2 items-end">
                         <AiOutlineClose
-                            onClick={() => setShowDesc(false)}
+                            onClick={() => setShowDescription(false)}
                             className="text-2xl text-neutral-200 cursor-pointer"
                         />
                         <p className="text-lg whitespace-pre-line">
-                            {playListInfo.description}
+                            {playlistInfo.description}
                         </p>
                     </div>
                 </div>
@@ -48,7 +48,7 @@ function Playlist() {
                     {/* Thumbnail */}
                     <div className="col-12 col-md-4">
                         <img
-                            src={playListInfo?.thumbnail}
+                            src={playlistInfo?.thumbnail}
                             alt="Playlist Thumbnail"
                             className="aspect-[16/9] object-cover mx-auto bg-neutral-900"
                         />
@@ -57,15 +57,15 @@ function Playlist() {
                     {/* Details */}
                     <div className="col-12 col-md-8 flex flex-col gap-2">
                         <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
-                            {playListInfo?.title}
+                            {playlistInfo?.title}
                         </h1>
-                        {playListInfo?.description && (
+                        {playlistInfo?.description && (
                             <div>
                                 <p className="text-neutral-400 whitespace-pre-line line-clamp-3">
-                                    {playListInfo.description}
+                                    {playlistInfo.description}
                                 </p>
                                 <button
-                                    onClick={() => setShowDesc(true)}
+                                    onClick={() => setShowDescription(true)}
                                     className="font-semibold"
                                 >
                                     more
